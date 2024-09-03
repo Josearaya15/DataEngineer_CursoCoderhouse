@@ -1,0 +1,20 @@
+[2024-09-03T02:22:55.453+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-09-03T02:22:55.471+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: redshift_etl_dag.extrear_datos_API manual__2024-09-03T02:10:38.592145+00:00 [queued]>
+[2024-09-03T02:22:55.480+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: redshift_etl_dag.extrear_datos_API manual__2024-09-03T02:10:38.592145+00:00 [queued]>
+[2024-09-03T02:22:55.481+0000] {taskinstance.py:2306} INFO - Starting attempt 5 of 6
+[2024-09-03T02:22:55.494+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): extrear_datos_API> on 2024-09-03 02:10:38.592145+00:00
+[2024-09-03T02:22:55.503+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=112) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-09-03T02:22:55.507+0000] {standard_task_runner.py:63} INFO - Started process 116 to run task
+[2024-09-03T02:22:55.510+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'redshift_etl_dag', 'extrear_datos_API', 'manual__2024-09-03T02:10:38.592145+00:00', '--job-id', '33', '--raw', '--subdir', 'DAGS_FOLDER/dag_etl.py', '--cfg-path', '/tmp/tmp0amb1rbq']
+[2024-09-03T02:22:55.513+0000] {standard_task_runner.py:91} INFO - Job 33: Subtask extrear_datos_API
+[2024-09-03T02:22:55.619+0000] {task_command.py:426} INFO - Running <TaskInstance: redshift_etl_dag.extrear_datos_API manual__2024-09-03T02:10:38.592145+00:00 [running]> on host 9110929bbae0
+[2024-09-03T02:22:55.737+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='jose_araya' AIRFLOW_CTX_DAG_ID='redshift_etl_dag' AIRFLOW_CTX_TASK_ID='extrear_datos_API' AIRFLOW_CTX_EXECUTION_DATE='2024-09-03T02:10:38.592145+00:00' AIRFLOW_CTX_TRY_NUMBER='5' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-03T02:10:38.592145+00:00'
+[2024-09-03T02:22:55.738+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-09-03T02:22:58.397+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-09-03T02:22:58.397+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-09-03T02:22:58.407+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=redshift_etl_dag, task_id=extrear_datos_API, run_id=manual__2024-09-03T02:10:38.592145+00:00, execution_date=20240903T021038, start_date=20240903T022255, end_date=20240903T022258
+[2024-09-03T02:22:58.455+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-09-03T02:22:58.480+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-09-03T02:22:58.482+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
